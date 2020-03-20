@@ -1,0 +1,1 @@
+* * * * * /usr/local/bin/php /var/www/html/dongxi/yii schedule/run --scheduleFile=@console/config/schedule.php 1>> /data/logs/crontab/rageframeConsoleLog.text 2>&1
