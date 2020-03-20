@@ -20,13 +20,13 @@ RUN mkdir -p /data/logs/xdebug/profiler \
 && mkdir -p /var/log/supervisor \
 && touch /var/log/cron.log
 
-RUN cp /etc/apt/sources.list /etc/apt/sources.list.bak \
-&& > /etc/apt/sources.list \
-echo 'deb http://mirrors.ustc.edu.cn/debian stable main contrib non-free\n\
-deb-src http://mirrors.ustc.edu.cn/debian stable main contrib non-free\n\
-deb http://mirrors.ustc.edu.cn/debian stable-proposed-updates main contrib non-free\n\
-deb-src http://mirrors.ustc.edu.cn/debian stable-proposed-updates main contrib non-free\n'\
->> /etc/apt/sources.list
+# RUN cp /etc/apt/sources.list /etc/apt/sources.list.bak \
+# && > /etc/apt/sources.list \
+# echo 'deb http://mirrors.ustc.edu.cn/debian stable main contrib non-free\n\
+# deb-src http://mirrors.ustc.edu.cn/debian stable main contrib non-free\n\
+# deb http://mirrors.ustc.edu.cn/debian stable-proposed-updates main contrib non-free\n\
+# deb-src http://mirrors.ustc.edu.cn/debian stable-proposed-updates main contrib non-free\n'\
+# >> /etc/apt/sources.list
 
 RUN apt-get update -y && apt-get install -f -y \
     telnet locales ttf-wqy-zenhei apt-utils \
